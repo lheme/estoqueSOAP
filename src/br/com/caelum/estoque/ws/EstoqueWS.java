@@ -1,6 +1,6 @@
 package br.com.caelum.estoque.ws;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import javax.jws.WebMethod;
 import javax.jws.WebResult;
@@ -19,7 +19,7 @@ public class EstoqueWS {
 	@WebResult(name = "itens")
 	public ListaItens getItens() {
 		System.out.println("Chamando getItens()");
-		ArrayList<Item> lista = dao.todosItens();
+		List<Item> lista = dao.todosItens();
 		return new ListaItens(lista);
 	}
 }
